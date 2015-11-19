@@ -1,0 +1,15 @@
+body, html {
+    height:100%;
+}
+.login {
+    width:100%;
+    position:absolute; /* to place it somewhere on the screen */
+    top:0px;         /* free space at top */
+    bottom:0px;        /* makes it lock to the bottom */
+}
+#login-inner {
+    width:100%;
+    position:absolute;
+    min-height:100% !important; /* browser fill */
+    height:auto;                /*content fill */
+}
