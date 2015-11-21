@@ -4,35 +4,44 @@
     <meta charset="utf-8">
     <title>B&R Dashboard</title>
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" charset="utf-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-<div ui-view>
+    <div layout="row">
+      <div flex="33" offset="33">
+        <div ui-view></div>
+      </div>
+    </div>
 
-</div>
-
+  <!--Angular & Ang Material -->
     <script src="bower_components/angular/angular.js" charset="utf-8"></script>
     <script src="bower_components/angular-animate/angular-animate.js" charset="utf-8"></script>
     <script src="bower_components/angular-aria/angular-aria.js" charset="utf-8"></script>
     <script src="bower_components/angular-material/angular-material.js" charset="utf-8"></script>
-
     <!-- ui-router -->
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js" charset="utf-8"></script>
-
     <!-- Firebase -->
     <script src="bower_components/firebase/firebase.js" charset="utf-8"></script>
-
     <!-- Angular Fire -->
     <script src="bower_components/angularfire/dist/angularfire.js" charset="utf-8"></script>
     <!-- Ang Background Video -->
     <script src="bower_components/angular-video-bg/angular-video-bg.js" charset="utf-8"></script>
+    <!-- Angular Icons -->
+    <script src="bower_components/angular-material-icons/angular-material-icons.js" charset="utf-8"></script>
+    <!-- Angular MD5 (Gravatar) -->
+    <script src="bower_components/angular-md5/angular-md5.js" charset="utf-8"></script>
 
 
-    <script src="app/app.js" charset="utf-8"></script>
-    <script src="app/login/loginCtrl.js" charset="utf-8"></script>
+  <!-- Angular components -->
+    <script src="app.js"></script>
+    <script src="./app/auth/authController.js"></script>
+    <script src="./app/auth/authService.js"></script>
+    <script src="./app/user/userService.js"></script>
+    <script src="./app/status/statusController.js"></script>
+    <script src="./app/status/statusService.js"></script>
 
-  <!--  <script src="app/home/homeCtrl.js" charset="utf-8"></script>
-    <script src="app/dashboard/ordersCtrl.js" charset="utf-8"></script> -->
 
   </body>
 </html>

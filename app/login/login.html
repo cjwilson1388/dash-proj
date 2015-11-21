@@ -1,14 +1,30 @@
-<div ng-controller="loginCtrl" class="login">
-  <div id="login-inner">
+<div class="login">
+
+<!--  <div id="video-inner">
     <video-bg video-id="'iNJdPyoqt8U'"></video-bg>
-
-    <h2 style="color: white">This is the login page</h2>
-
-      <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-            <md-button class="md-raised" ng-click="auth.$authWithOAuthPopup('google')">Login with Google</md-button>
-            <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button>
-      </section>
+  <div class="outer-div">-->
 
 
+  <div class="inner-div">
+
+  <div class="center-form">
+  <md-content class="md-padding">
+    <h3>Login to Dashboard</h3>
+        <md-input-container class="md-block">
+          <!-- Use floating placeholder instead of label -->
+          <md-icon  class="material-icons">email</md-icon>
+          <input ng-model="auth.email" type="email" placeholder="Email (required)" ng-required="true">
+        </md-input-container>
+        <md-input-container class="md-block" id="password-input">
+          <input type="password" ng-model="auth.password" type="text" placeholder="Password (required)">
+        </md-input-container>
+          <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+                <md-button class="md-raised" ng-click="auth.login()">Login</md-button>
+                <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button>
+          </section>
+    </md-content>
     </div>
+</div>
   </div>
+</div>
+</div>

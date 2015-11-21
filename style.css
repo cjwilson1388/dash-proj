@@ -1,15 +1,74 @@
 body, html {
     height:100%;
 }
+body
+{
+
+  height: 100%
+  background-color: #fcfcfc;
+}
+.outer-div
+{
+  width: 100%;
+  top: 0px;
+  bottom: 0px;
+  background-color: #f3f3f3;
+}
+.inner-div
+{
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  bottom: 0px;
+  background-color: #ffffff;
+  border-radius: 3px;
+}
+
 .login {
     width:100%;
     position:absolute; /* to place it somewhere on the screen */
-    top:0px;         /* free space at top */
+    top: 0px;         /* free space at top */
     bottom:0px;        /* makes it lock to the bottom */
 }
-#login-inner {
+
+
+#video-inner {
     width:100%;
     position:absolute;
     min-height:100% !important; /* browser fill */
     height:auto;                /*content fill */
+}
+
+
+#password-input {
+  padding-left: 36px;
+}
+
+
+.center-form {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 350px;
+  height: 350px;
+  background-color: #ffffff;
+  border-radius: 3px;
+
+}
+
+.face {
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  width: 48px;
+  margin: 16px;
+}
+
+.remove-status {
+  cursor: pointer;
+  color: red;
+  font-weight: bold;
 }
