@@ -1,2 +1,2 @@
-
-app/resource/*
+\/app/resource/*
+\/bower_components/*
