@@ -5,7 +5,7 @@
   'use strict';
 
   angular
-    .module('brApp', ['firebase', 'ngMaterial', 'angular-md5', 'ui.router', 'angularVideoBg', 'angularVideoBg', 'ngMdIcons', 'ui.grid'])
+    .module('brApp', ['firebase', 'ngMaterial', 'angular-md5', 'ui.router', 'angularVideoBg', 'angularVideoBg', 'ngMdIcons'])
     .config(function($stateProvider, $urlRouterProvider) {
 
     // If a route other than status is requested,
