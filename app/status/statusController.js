@@ -24,7 +24,8 @@
           text: vm.statusText,
           user: {
             username: $rootScope.loggedInUserData.username,
-            email: $rootScope.loggedInUserData.email
+            email: $rootScope.loggedInUserData.email,
+            office: $rootScope.loggedInUserData.office
           }
         });
         vm.statusText = '';

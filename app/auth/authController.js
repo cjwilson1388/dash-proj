@@ -6,7 +6,7 @@
     .module('brApp')
     .controller('AuthController', AuthController);
 
-  function AuthController(Auth, User, $state) {
+  function AuthController(Auth, User, $state, $scope) {
 
     var vm = this;
 
@@ -22,7 +22,11 @@
 
       Auth.$createUser({
         email: vm.email,
-        password: vm.password
+        password: vm.password,
+        office: vm.office,
+        username: vm.email,
+        firstName: vm.firstName,
+        lastName: vm.lastName
       }).then(function(userData) {
         saveUser(userData);
         login();
@@ -34,13 +38,20 @@
     function saveUser(userData) {
 
       var user = User.newUserRef(userData);
-      user.username = vm.username;
+      user.username = vm.email;
       user.email = vm.email;
+      user.office = vm.office;
+      user.firstName = vm.firstName;
+      user.lastName = vm.lastName;
+
 
       user.$save().then(function(success) {
        vm.username = null;
        vm.email = null;
        vm.password = null;
+       vm.office = null;
+       vm.firstName = null;
+       vm.lastName = null;
         $state.go('status');
       }, function(error) {
         console.log("there was an error! " + error);
@@ -60,6 +71,17 @@
         console.log(error);
       });
     }
+
+    $scope.offices = [
+          "Salt Lake City",
+          "San Fransisco",
+          "Farmington",
+          "Provo",
+          "Online"
+      ];
+
   }
+
+
 
 })();

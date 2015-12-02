@@ -28,6 +28,11 @@
         templateUrl: 'app/login/createUser.html',
         controller: 'AuthController as auth'
       })
+      .state('dashboard', {
+        url: '/dashboard',
+        templateUrl: 'app/dashboard/dashTmpl.html',
+        controller: 'DashCtrl as dashboard'
+      })
     })
     .run(function($rootScope, $state, User) {
 

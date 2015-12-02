@@ -1,11 +1,20 @@
+<md-content class="padding">
+  <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+        <md-button class="md-raised" ng-href="#/login">Login</md-button>
+        <md-button class="md-raised" ng-href="#/addUser">Create User</md-button>
+        <md-button class="md-raised" ng-href="#/dashboard">Dashboard</md-button>
+  </section>
+</md-content>
 <div class="center-form">
-
-
-<md-content class="md-padding">
+<md-content class="padding">
 <h3>Register</h3>
 <md-input-container>
-  <label>User Name</label>
-  <input ng-model="auth.username" type="text">
+  <label>First Name</label>
+  <input ng-model="auth.firstName" type="text">
+</md-input-container>
+<md-input-container>
+  <label>Last Name</label>
+  <input ng-model="auth.lastName" type="text">
 </md-input-container>
 <md-input-container>
   <label>Email</label>
@@ -15,6 +24,14 @@
   <label>Password</label>
   <input type="password" ng-model="auth.password" type="text">
 </md-input-container>
+
+<md-input-container>
+    <label>Office</label>
+    <md-select ng-model="auth.office">
+      <md-option ng-repeat="office in offices" value="{{office}}">{{office}}</md-option>
+    </md-select>
+</md-input-container>
+
 <md-button class="md-raised md-primary" ng-click="auth.createUser()">
   Register
 </md-button>

@@ -1,0 +1,18 @@
+<div layout="column">
+  <div layout="row" flex>
+    <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-4dp" md-component-id="left" >
+      Open Left Menu
+      <md-button class="md-raised" ng-href="#/addUser">Create User</md-button>
+      <md-button class="md-raised" ng-href="#/login">Login</md-button>
+      <md-button class="md-raised" ng-href="#/dashboard">Dashboard</md-button>
+
+    </md-sidenav>
+    <md-content>
+    <div layout="column" flex id="content">
+    Center Content
+    <md-button ng-click="openLeftMenu()">
+      Open Left Menu
+    </md-button>
+  </md-content>
+</section>
+</div>

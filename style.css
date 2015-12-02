@@ -72,3 +72,9 @@ body
   color: red;
   font-weight: bold;
 }
+
+md-sidenav.md-locked-open {
+  width: 150px !important;
+  min-width: 150px !important;
+  max-width: 150px !important;
+}
